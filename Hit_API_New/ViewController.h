@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) NSNumber *currentPage;
+@property (nonatomic, strong) NSNumber *recordsPerPage;
+
+
+- (IBAction)buttonActionClickToHitAPI:(id)sender;
 
 @end
 

@@ -1,0 +1,468 @@
+//
+//  AppConstants.h
+//  fitternity
+//
+//  Created by Nagendra Chowdary on 07/11/2015.
+//  Copyright © 2015 kuliza. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+#define CATEGORY_CELL_HEIGHT 56
+#define SELECTIONS_CELL_HEIGHT 110
+#define OFFERS_CELL_HEIGHT 180
+#define SELECTED_VENDORS_CELL_HEIGHT 220
+
+#define CATEGORY_CELL_COUNT 5
+#define SELECTIONS_CELL_COUNT 4
+#define OFFERS_CELL_COUNT 2
+
+#define TAB_HEIHGT 45
+#define TAB_OFFSET 36
+
+#define POPUP_HEIGHT_OFFSET 0.65
+
+#define SECONDSINANHOUR 3600
+#define SECONDSINAMINUTE 60
+
+#define S_SMALL_TEXT_SIZE 10
+#define M_SMALL_TEXT_SIZE 11
+#define L_SMALL_TEXT_SIZE 12
+#define S_MEDIUM_TEXT_SIZE 14
+#define M_MEDIUM_TEXT_SIZE 15
+#define L_MEDIUM_TEXT_SIZE 18
+
+
+#define PRIORITY_MEDIUM 751
+#define PRIORITY_LOW 500
+#define ZERO_HEIGHT 0
+
+#define STATUS_CODE_401 401
+#define STATUS_CODE_666 666
+
+/**** Common Use*******/
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
+
+#define GOOGLE_SCOPE @"https://www.googleapis.com/auth/plus.login"
+
+@interface AppConstants : NSObject
+
+extern NSString *const TRIAL_AUTOMATED;
+extern NSString *const TRIAL_MANUAL;
+extern NSString *const TRIAL_PAID;
+extern NSString *const WORKOUT_SESSION;
+
+extern NSString *const MEMBERSHIP_PAYU;
+extern NSString *const MEMBERSHIP_COD;
+extern NSString *const MEMBERSHIP_FAKE;
+
+extern NSString *const LOCATIONUPDATESUCCESS;
+extern NSString *const LOCATIONUPDATEFAILURE;
+
+extern NSString *const FORGOTPASSWORD_PLEASECHECKYOUREMAIL;
+extern NSString *const FILLPREFERENCE_PREFERENCESAVED;
+
+
+extern NSString *const NO_RESULTS_FOUND;
+// User Defatuls
+extern NSString *const USER_SELECTED_CITY;
+extern NSString *const USER_CURRENT_CITY;
+extern NSString *const USER_LATITUDE;
+extern NSString *const USER_LONGITUDE;
+extern NSString *const USER_SUB_LOCALITY;
+extern NSString *const USER_LOCATION;
+extern NSString *const USER_STATE;
+extern NSString *const USER_CATEGORIES;
+extern NSString *const USER_TIMINGS;
+extern NSString *const USER_CURRENT_LATITUDE;
+extern NSString *const USER_CURRENT_LONGITUDE;
+extern NSString *const USER_CITIES;
+extern NSString *const USER_AREA;
+extern NSString *const USER_TOKEN;
+extern NSString *const USER_FACEBOOK_PICTURE;
+extern NSString *const USER_FACEBOOK_ID;
+extern NSString *const USER_LOGGED_IN_NOTIFICATION;
+
+
+// Payment Gateway
+extern NSString *const PAYUMONEY_PAYMENTGATEWAY_URL;
+extern NSString *const PAYUMONEY_SUCCESS_URL;
+extern NSString *const PAYUMONEY_FAILURE_URL;
+extern NSString *const PAYUMONEY_KEY;
+extern NSString *const PAYUMONEY_SALT;
+
+extern NSString *const PAYUMONEY_MSG_PLEASETRYAGAIN;
+extern NSString *const PAYUMONEY_MSG_PAYMENTFAILED;
+
+// PayTm SDK
+extern NSString *const PAYTM_WAP;
+extern NSString *const PAYTM_MID ;
+extern NSString *const PAYTM_MERCHANT_KEY ;
+extern NSString *const PAYTM_INDUSTRY_TYPE_ID ;
+extern NSString *const PAYTM_CHANNEL_ID ;
+extern NSString *const PAYTM_PROD_SERVER_URL;
+
+
+
+extern NSString *const CUSTOME_BUTTON2;
+// UI Constant
+extern NSString *const FT_PLACEHOLDER_IMAGE;
+
+//  Common Constant
+extern NSString *const FT_RUPEE_SYMBOL;
+
+
+extern NSString *const WALKTHROUGH_IMAGE_1;
+extern NSString *const WALKTHROUGH_IMAGE_2;
+extern NSString *const WALKTHROUGH_IMAGE_3;
+extern NSString *const WALKTHROUGH_IMAGE_4;
+extern NSString *const EMAIL_MESSAGE;
+extern NSString *const EMAIL_SUBJECT ;
+// SB IDENTIFIERS
+extern NSString *const SEARCH_SB;
+extern NSString *const SEARCH_HSLS_SB;
+
+// VC Identifiers
+extern NSString *const FT_SEARCH_VC;
+extern NSString *const FT_AUTOSUGGESTEDSEARCH_VC;
+extern NSString *const FT_HOMESCREENLOCATIONSEARCH_VC;
+
+// Cell Identifiers
+extern NSString *const FT_SEARCH_TV_CELL;
+extern NSString *const FT_CATEGORY_TAG_CV_CELL;
+extern NSString *const FT_Images_CV_CELL;
+extern NSString *const FT_AUTOSUGGESTEDSEARCH_TV_CELL;
+extern NSString *const FT_HOMESCREENLOCATIONSEARCH_CELL;
+
+extern NSString *const WALKTHROUGH_TITLE_1;
+extern NSString *const WALKTHROUGH_TITLE_2;
+extern NSString *const WALKTHROUGH_TITLE_3;
+extern NSString *const WALKTHROUGH_TITLE_4;
+
+extern NSString *const WALKTHROUGH_NAME_1;
+extern NSString *const WALKTHROUGH_NAME_2;
+extern NSString *const WALKTHROUGH_NAME_3;
+
+
+extern NSString *const WALKTHROUGH_DESC_1;
+extern NSString *const WALKTHROUGH_DESC_2;
+extern NSString *const WALKTHROUGH_DESC_3;
+
+#pragma mark - Filter View
+extern NSString *const FT_FILTER_STORYBOARD_IDENTIFER;
+extern NSString *const FT_FILTERVIEWCONTROLLER_IDENTIFIER;
+//extern NSString *const FT_FILTER_VIEW_IDENTIFIER;
+extern NSString *const FT_FILTER_SIDE_MENU_VIEW_IDENTIFIER;
+extern NSString *const FT_FILTER_BUDGET_VIEW_IDENTIFIER;
+
+extern NSString *const FT_FILTER_AMENITIES_VIEW_IDENTIFIER;
+extern NSString *const FT_FILTER_SPECIAL_CLASSES_VIEW_IDENTIFIER;
+extern NSString *const FT_FILTER_CATEGORIES_VIEW_IDENTIFIER;
+extern NSString *const FT_FILTER_LOCATION_VIEW_IDENTIFIER;
+
+extern NSString *const FT_FILTER_SELECTION_VIEW_IDENTIFIER;
+extern NSString *const FT_FILTER_SELECTION_TABLE_VIEW_CELL_IDENTIFIER;
+
+extern NSString *const FT_FILTER_HIERARCHY_SELECTION_TABLE_VIEW_HEADER_VIEW_IDENTIFIER;
+
+extern NSString *const FT_FILTER_HIERARCHY_SELECTION_TABLE_VIEW_IDENTIFIER;
+
+#pragma mark - API Params Default Values
+extern NSString *const FT_API_PARAMS_LOCATION_DEFAULT_CITY;
+
+#pragma mark - Filters Side Menu
+extern NSString *const FT_FILTER_SIDE_MENU_CATEGORIES;
+extern NSString *const FT_FILTER_SIDE_MENU_LOCATIONS;
+extern NSString *const FT_FILTER_SIDE_MENU_SPECIAL_CLASSES;
+extern NSString *const FT_FILTER_SIDE_MENU_AMENITIES;
+extern NSString *const FT_FILTER_SIDE_MENU_BUDGET;
+
+#pragma mark - Filter Special Classes
+extern NSString *const FT_FILTER_SPECIAL_CLASSES_FREE_TRIAL;
+extern NSString *const FT_FILTER_SPECIAL_CLASSES_GROUP_CLASSES;
+extern NSString *const FT_FILTER_SPECIAL_CLASSES_SUNDAY_OPEN;
+extern NSString *const FT_FILTER_SPECIAL_CLASSES_PERSONAL_TRAINING;
+
+#pragma mark - Filter Budget
+extern NSString *const FT_FILTER_BUDGET_LESS_THAN_1000;
+extern NSString *const FT_FILTER_BUDGET_BETWEEN_1000_2500;
+extern NSString *const FT_FILTER_BUDGET_BETWEEN_2500_5000;
+extern NSString *const FT_FILTER_BUDGET_BETWEEN_5000_7500;
+extern NSString *const FT_FILTER_BUDGET_BETWEEN_7500_15000;
+extern NSString *const FT_FILTER_BUDGET_GREATER_THAN_15000;
+
+#pragma mark - Sort Keywords
+extern NSString *const FT_SORT_POPULARITY;
+extern NSString *const FT_SORT_RATING;
+extern NSString *const FT_SORT_MEMBERSHIPFEEHIGHTOLOW;
+extern NSString *const FT_SORT_MEMBERSHIPFEELOWTOHIGH;
+
+extern NSString *const FT_SORT_FIELD_BUDGET;
+extern NSString *const FT_SORT_FIELD_RATING;
+extern NSString *const FT_SORT_FIELD_POPULARITY;
+extern NSString *const FT_SORT_ORDER_ASC;
+extern NSString *const FT_SORT_ORDER_DESC;
+
+
+#pragma mark - Upcoming Classes
+extern NSString *const FT_UPCOMING_CLASSES_DATES_COLLECTION_VIEW_CELL;
+extern NSString *const FT_UPCOMING_SESSION_VIEW_CONTROLLER_IDENTIFIER;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_TABLE_VIEW_CELL_IDENTIFIER;
+
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_FREESESSION;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_PERSESSION;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_SESSIONWILLSTARTIN;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_HOUR;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_HOURS;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_AND;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_MINUTE;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_MINUTES;
+
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_SORT_WEEKNAME_SUNDAY;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_SORT_WEEKNAME_MONDAY;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_SORT_WEEKNAME_TUESDAY;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_SORT_WEEKNAME_WEDNESDAY;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_SORT_WEEKNAME_THURSDAY;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_SORT_WEEKNAME_FRIDAY;
+extern NSString *const FT_UPCOMING_CLASSES_SESSION_SORT_WEEKNAME_SATURDAY;
+
+extern NSString *const FT_UPCOMING_CLASSES_TITLE;
+
+
+extern NSString *const SUCCESS_TEXT;
+extern NSString *const ERROR_TEXT;
+
+#pragma mark - Slot Selection
+extern NSString *const FT_SLOT_SELECTION_STORYBOARD_IDENTIFIER;
+extern NSString *const FT_SLOT_SELECTION_VIEW_CONTROLLER_IDENTIFIER;
+
+extern NSString *const FT_SLOT_SELECTION_SESSION_STORYBOARD_IDENTIFIER;
+extern NSString *const FT_SLOT_SELECTION_SESSION_COLLECTION_VIEW_CELL_IDENTIFIER;
+
+extern NSString *const FT_SLOTSELECTION_VC_TITLE;
+
+#pragma mark - Book A Trial
+extern NSString *const FT_BOOK_A_TRIAL_CELL_IDENTIFIER;
+
+extern NSString *const FT_BOOK_A_TRIAL_STORYBOARD_IDENTIFIER;
+extern NSString *const FT_BOOK_A_TRIAL_SERVICE_VIEW_CONTROLLER_IDENTIFIER;
+extern NSString *const FT_BOOK_A_TRIAL_PROFILE_VIEW_CONTROLLER_IDENTIFIER;
+
+// THIRD PARTY KEYS
+extern NSString *const GOOGLE_API_KEY;
+extern NSString *const GOOGLE_DIRECTIONS_API_KEY;
+
+
+// Nib Names
+extern NSString *const CATEGORY_GRID_CELL;
+extern NSString *const SELECTION_GRID_CELL;
+extern NSString *const OFFERS_GRID_CELL;
+extern NSString *const LOCATION_LIST_CELL;
+extern NSString *const CATEGORY_LIST_CELL;
+extern NSString *const SELECTED_VENDER_CELL;
+extern NSString *const SERVICES_MEMBERSHIP_CELL;
+extern NSString *const OFFERS_CATEGORY_CELL;
+extern NSString *const OFFERS_TAB_CELL;
+extern NSString *const MEMBERSHIP_SLOT_CELL;
+extern NSString *const MEMBERSHIP_TIME_SLOT_CELL;
+extern NSString *const PREFERENCE_CATEGORY_CELL;
+// Controller Names
+extern NSString *const HOME_CONTROLLER;
+extern NSString *const LOGIN_CONTROLLER;
+extern NSString *const REGISTER_CONTROLLER;
+extern NSString *const ROOT_CONTROLLER;
+extern NSString *const SIDE_MENU_CONTROLLER;
+extern NSString *const SIDE_MENU_NAV_CONTROLLER;
+extern NSString *const HOME_NAV_CONTROLLER;
+extern NSString *const DISCOVER_CONTROLLER;
+extern NSString *const SELECTIONS_LIST_CONTROLLER;
+extern NSString *const SELECTED_VENDER_CONTROLLER;
+extern NSString *const SERVICES_DETAIL_CONTROLLER;
+extern NSString *const FT_VENDER_DETAIL_CONTROLLER;
+extern NSString *const ACCOUNT_VIEW_CONTROLLER;
+extern NSString *const SERVICES_TAB_CONTROLLER;
+extern NSString *const CONFIRMATION_CONTROLLER;
+extern NSString *const WRITEREVIEW_CONTROLLER;
+extern NSString *const THANKYOU_VC;
+extern NSString *const BOOKTRIALMANUALCONFIRMEDVC;
+extern NSString *const FINDER_OFFERINGS_CONTROLLER;
+extern NSString *const OFFERS_VIEW_CONTROLLER;
+extern NSString *const MEMBERSHIP_SLOTS_CONTROLLER;
+extern NSString *const GOOGLEMAP_CONTROLLER ;
+extern NSString *const MYTRIALS_TABLEVIEW_CELL;
+extern NSString *const PAYMENTOPTIONVC;
+extern NSString *const OFFERS_LIST_CONTROLLER;
+extern NSString *const PAYUMONEYVIEWCONTROLLER;
+extern NSString *const FT_UPCOMING_CLASSES_VC;
+extern NSString *const REVIEW_VIEWALL_CONTROLLER;
+extern NSString *const FORGOT_PASSWORD_CONTROLLER;
+extern NSString *const FTGALLERY_SINGLE_CONTROLLER;
+extern NSString *const SPLASH_SCREEN_CONTROLLER;
+extern NSString *const FILL_PREFERENCE_CONTROLLER;
+extern NSString *const PERSONALIZE_EXPERIENCE_CONTROLLER;
+extern NSString *const OTP_CONTROLLER;
+
+extern NSString *const FT_TRIAL_PAGE_DETAIL_CONTROLLER;
+
+
+//Storyboard Names
+extern NSString *const HOME_STORYBOARD;
+extern NSString *const LOGIN_STORYBOARD;
+extern NSString *const PAYUMONEY_STORYBOARD;
+
+extern NSString *const CUSTOME_BUTTON;
+extern NSString *const UPCOMING_CLASSES_STORYBOARD;
+
+
+extern NSString *const USER_LOCATION_NOTIFICATION;
+extern NSString *const ROW_UPDATE_NOTIFICATION;
+
+extern NSString *const ABOUT_FITTERNITY_TEXT;
+extern NSString *const ABOUT_FITTERNITY_TITLE;
+extern NSString *const REQUEST_CALL_BACK_TITLE;
+extern NSString *const ABOUT_FITTERNITY_EMAIL_BUTTON_ICON;
+extern NSString *const ABOUT_FITTERNITY_EMAIL_BUTTON_NAME;
+extern NSString *const ABOUT_FITTERNITY_PHONE_BUTTON_ICON;
+extern NSString *const ABOUT_FITTERNITY_PHONE_BUTTON_NAME;
+
+// Book A Trial VC Constant
+extern NSString *const BOOKATRIAL_PREFERREDDAY_MONWEDFRI;
+extern NSString *const BOOKATRIAL_PREFERREDDAY_TUESTHRUSAT;
+extern NSString *const BOOKATRIAL_PREFERREDDAY_SATSUN;
+
+extern NSString *const BOOKATRIAL_PREFERREDTIME_BEFORE10AM;
+extern NSString *const BOOKATRIAL_PREFERREDTIME_10AM2PM;
+extern NSString *const BOOKATRIAL_PREFERREDTIME_2PM6PM;
+extern NSString *const BOOKATRIAL_PREFERREDTIME_6PM10PM;
+
+extern NSString *const BOOKATRIAL_VC_TITLE;
+
+// Confirmation Screen Constants
+extern NSString *const CONFIRMATION_SCREEN_FREETRIALSESSION;
+extern NSString *const CONFIRMATION_SCREEN_CUSTOMERIDENTITYEMAIL;
+extern NSString *const CONFIRMATION_SCREEN_CUSTOMERSOURCE;
+extern NSString *const CONFIRMATION_SCREEN_TYPE_MEMBERSHIP;
+
+extern NSString *const CONFIRMATION_SCREEN_NAMESHOULDBEFILLED;
+extern NSString *const CONFIRMATION_SCREEN_EMAILSHOULDBEFILLED;
+extern NSString *const CONFIRMATION_SCREEN_EMAILSHOULDBEVALID;
+extern NSString *const CONFIRMATION_SCREEN_PHONESHOULDBEFILLED;
+extern NSString *const CONFIRMATION_SCREEN_PHONESHOULDBEVALID;
+
+extern NSString *const CONFIRMATION_SCREEN_EMAIL_ICON;
+extern NSString *const CONFIRMATION_SCREEN_PROFILE_ICON;
+extern NSString *const CONFIRMATION_SCREEN_PHONE_ICON;
+
+extern NSString *const CONFIRMATION_SCREEN_ALERTOKMSG;
+
+extern NSString *const CHANGE_PASSWORD_CONTROLLER;
+// Thank You Screen
+
+extern NSString *const THANKYOU_SCREEN_HEADER_SUBTITLE_MEMBERHSIP;
+extern NSString *const THANKYOU_SCREEN_HEADER_SUBTITLE_UPCOMINGCLASSES;
+extern NSString *const THANKYOU_SCREEN_HEADER_SUBTITLE_TRIAL_SESSION;
+extern NSString *const THANKYOU_SCREEN_HEADER_SUBTITLE_SESSION;
+extern NSString *const CONFIRMATION_SCREEN_TYPE_UPCOMING_CLASSES;
+
+
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_ABOUTYOURREQUEST;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_ABOUTYOURTRIAL;
+
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_NOTE1;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_NOTE2;
+
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_NOTE_TRIAL_AUTO_FREE;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_NOTE_TRIAL_AUTO_PAID;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_NOTE_TRIAL_MANUAL;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_NOTE_WORKOUT_SESSION;
+
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_NOTE_MEMBERSHIP_DIRECT;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_NOTE_MEMBERSHIP_COD;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_NOTE_MEMBERSHIP_FAKE;
+
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_THANKS0;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_THANKS1;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_THANKS2;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_THANKS3;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_THANKS4;
+extern NSString *const THANKYOU_SCREEN_HEADER_BOOKINGMEMBERSHIP_THANKS5;
+
+extern NSString *const THANKYOU_SCREEN_HEADER_MEMBERSHIP_THANKS;
+extern NSString *const THANKYOU_SCREEN_HEADER_MEMBERSHIP_REACHOUT;
+extern NSString *const THANKYOU_SCREEN_HEADER_MEMBERSHIP_DETAILS;
+extern NSString *const THANKYOU_SCREEN_HEADER_MEMBERSHIP_NOTE;
+
+// Payment Screen
+extern NSString *const PAYMENT_SCREEN_TITLE;
+extern NSString *const PAYMENT_GENERATETEMPORDER_RESPONSE_ORDER;
+extern NSString *const PAYMENT_GENERATETEMPORDER_RESPONSE_ORDER_ID;
+
+// Search View Constant
+extern NSString *const FTSEARCHTABLEVIEWCELL_MULTIPLELOCATIONS;
+
+//user default
+extern NSString *const BOOKMARK_LIST ;
+extern NSString *const MAP_USERLAT;
+extern NSString *const MAP_USERLONG;
+extern NSString *const MAP_USERCITY;
+extern NSString *const MAP_USERDATA;
+extern NSString *const MAP_USERSUBLOCALITY;
+
+//Jagprit's constants
+extern NSString *const HEALTHY_TIFFINS;
+extern NSString *const HEALTHY_SNACKS_BEVERAGES;
+extern NSString *const PERSONAL_TRAINER;
+
+// DEVICE TYPE
+extern NSString *const DEVICE_TYPE;
+extern  NSString *const FT_DEVICE_TOKEN;
+
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+
+#pragma mark - Search Options
+extern NSString *const FT_VENDORSEARCH_SEARCHBAR_NOTEXTFOUND_TEXT;
+
+/***** TRIALS ENUM*********/
+typedef enum TRIAL_EVENT : NSUInteger{
+    CANCEL = 00,
+    RESCHEDULE = 01,
+    CONFIRM = 02,
+    REVIEW = 03,
+    BUY_MEMBERSHIP = 04,
+    REBOOK = 05
+    
+}TRIAL_EVENT;
+
+
+
+/***** TRIAL EVENTS *********/
+
+extern NSString *const TRIAL_CANCEL;
+extern  NSString *const TRIAL_RESCHEDULE;
+extern NSString *const TRIAL_CONFIRM;
+
+
+/***** MAKE IT 0 FOR DEPLOYMENT*********/
+
+#define DEBUG 1
+
+#if DEBUG
+#define DebugLog(s, ...) NSLog(s, ##__VA_ARGS__)
+#else
+#define DebugLog(s, ...)
+#endif
+@end
